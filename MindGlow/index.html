@@ -14,6 +14,9 @@
 </head>
 
 <body>
+    <!-- Inside your body tag -->
+<h1 class="title" data-aos="zoom-in" data-aos-duration="1000">MindGlow</h1>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script> 
     tinymce.init({
@@ -29,7 +32,6 @@
     <nav>
         <div id="logo">
             <img src="assets/mindglow-logo.gif" alt="MindGlow Logo">
-            <span>MindGlow</span>
         </div>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -38,15 +40,18 @@
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+   <!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-image">
         <img src="assets/hero-image.png" alt="MindGlow Hero Image">
-        <div class="hero-content">
+    </div>
+    <div class="hero-content">
         <h1>Welcome to MindGlow</h1>
         <p>Your space for healing and hope.</p>
         <button>Discover Stories</button>
     </div>
-    </section>
+</section>
+
 
     <!-- Stories Section -->
 <section id="stories" class="stories">
@@ -61,12 +66,17 @@
     </div>
     
     <!-- Sample story -->
-    <article>
+<section class="stories">
+    <article class="story-card">
         <h3>John's Journey</h3>
-        <p>John shares his incredible journey of recovery and hope.</p>
+        <img src="assets/giphy.gif" alt="John's portrait">
+        <p>John, a passionate software developer from San Francisco, faced unprecedented challenges in his life. From battling severe bouts of anxiety due to the pressures of the tech world to managing personal life upheavals, his journey was tumultuous.</p>
+        <p>However, with the help of dedicated therapists and a supportive community, John embarked on a path to recovery. He tapped into the strength he never knew he had and slowly rebuilt his life, one day at a time. Today, John actively participates in support groups, sharing his experiences, and inspiring others to seek help and hope.</p>
+        <a href="johns-story.html" class="read-more">Read more about John's Journey</a>
     </article>
     <!-- More sample stories can be added here -->
 </section>
+
 
 
     <!-- SERVICES SECTION -->
@@ -74,17 +84,17 @@
     <h2>Our Services</h2>
     <div class="service-cards">
         <div class="service-card">
-            <img src="path-to-image/service1.jpg" alt="Service 1">
+            <img src="assets/200w.gif" alt="Service 1">
             <h3>Therapeutic Assistance</h3>
             <p>Professional therapeutic services tailored for individual needs.</p>
         </div>
         <div class="service-card">
-            <img src="path-to-image/service2.jpg" alt="Service 2">
+            <img src="assets/clouds.gif" alt="Service 2">
             <h3>Group Support</h3>
             <p>Find comfort in group sessions, sharing and learning from peers.</p>
         </div>
         <div class="service-card">
-            <img src="path-to-image/service3.jpg" alt="Service 3">
+            <img src="assets/work-team.gif" alt="Service 3">
             <h3>Resource Hub</h3>
             <p>A vast library of resources to help you navigate mental health.</p>
         </div>
@@ -93,22 +103,35 @@
 
 
     <!-- Contact Section -->
-    <section id="contact">
+<section id="contact">
+    <div class="contact-content">
         <h2>Contact Us</h2>
         <p>If you have any questions or need assistance, please get in touch with our support team.</p>
+    </div>
+    <div class="contact-form">
         <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+            <div class="input-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+            </div>
 
-            <button type="submit">Send Message</button>
+            <div class="submit-button">
+                <button type="submit">Send Message</button>
+            </div>
         </form>
-    </section>
+    </div>
+</section>
+
 
     <!-- TESTIMONIALS SECTION -->
 <section class="testimonials container">
@@ -125,46 +148,59 @@
 
 <!-- NEWSLETTER SECTION -->
 <section class="newsletter container">
-    <h2>Stay Updated</h2>
-    <p>Subscribe to our newsletter for the latest updates and resources.</p>
-    <form action="#">
-        <input type="email" placeholder="Enter your email">
-        <button type="submit">Subscribe</button>
-    </form>
+    <div class="newsletter-content">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for the latest updates and resources.</p>
+    </div>
+    <div class="newsletter-form">
+        <form action="#">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
 </section>
+
 
 <!-- ABOUT US SECTION -->
 <section class="about container" data-aos="fade-up">
-    <h2>About Us</h2>
+    <div class="about-header">
+        <h2>About Us</h2>
+    </div>
     <div class="about-content">
         <div class="about-text">
-            <h3>Our Mission</h3>
-            <p>At MindGlow, we believe in the power of community and understanding. Our mission is to provide comprehensive mental health support, resources, and a platform for shared experiences.</p>
-            <h3>Our Journey</h3>
-            <p>MindGlow started as a small support group in 2015 and has grown to become a beacon of hope for many. Our platform is driven by stories, expertise, and the relentless pursuit of making mental health a priority for all.</p>
+            <div class="about-section">
+                <h3>Our Mission</h3>
+                <p>At MindGlow, we believe in the power of community and understanding. Our mission is to provide comprehensive mental health support, resources, and a platform for shared experiences.</p>
+            </div>
+            <div class="about-section">
+                <h3>Our Journey</h3>
+                <p>MindGlow started as a small support group in 2015 and has grown to become a beacon of hope for many. Our platform is driven by stories, expertise, and the relentless pursuit of making mental health a priority for all.</p>
+            </div>
         </div>
         <div class="about-image">
-            <img src="path-to-image/about-us.jpg" alt="About MindGlow">
+            <img src="assets/wmJp2hqvlyJn.gif" alt="About MindGlow">
         </div>
     </div>
 </section>
+
 
 <!-- EVENTS SECTION -->
 <section class="events container">
     <h2>Upcoming Events</h2>
     <div class="event-card">
         <div class="event-date">
-            <p>Nov 25</p>
-            <small>2023</small>
+            <span class="event-day">Nov 25</span>
+            <span class="event-year">2023</span>
         </div>
         <div class="event-details">
             <h3>Mental Health Awareness Webinar</h3>
-            <p>Join our panel of experts discussing the importance of mental health and ways to address challenges. Register now!</p>
-            <button>Register</button>
+            <p>Join our panel of experts discussing the importance of mental health and ways to address challenges.</p>
+            <button class="event-register-btn">Register</button>
         </div>
     </div>
     <!-- You can replicate the '.event-card' div for more events -->
 </section>
+
 
 
 
