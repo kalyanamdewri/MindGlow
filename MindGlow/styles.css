@@ -249,7 +249,7 @@ button:hover, input[type="submit"]:hover {
 
 /* Newsletter section styles */
 .newsletter {
-    background-color: #333; /* Dark background for contrast */
+    background-color: #d3cece; /* Dark background for contrast */
     color: #f7f7f7;  /* Light font color for readability against dark background */
     padding: 3rem 0;  /* Vertical padding */
     text-align: center;  /* Center-aligned text */
