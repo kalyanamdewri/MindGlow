@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.tiny.cloud/1/9ki7j7jsve3mon1n071medc1uqvdom10hgpg7ox0pf9903i1/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindGlow</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Assuming you have a favicon icon -->
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> 
+    tinymce.init({
+        selector: '#storyEditor',
+        plugins: 'textcolor link lists',
+        toolbar: 'forecolor backcolor | link | numlist bullist',
+        menubar: false,
+        height: 300 // you can adjust this value according to your preference
+    });
+    AOS.init();
+    </script>
+    <!-- Navigation Bar -->
+    <nav>
+        <div id="logo">
+            <img src="assets/mindglow-logo.gif" alt="MindGlow Logo">
+            <span>MindGlow</span>
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#stories">Stories of Hope</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="assets/hero-image.png" alt="MindGlow Hero Image">
+        <div class="hero-content">
+        <h1>Welcome to MindGlow</h1>
+        <p>Your space for healing and hope.</p>
+        <button>Discover Stories</button>
+    </div>
+    </section>
+
+    <!-- Stories Section -->
+<section id="stories" class="stories">
+    <h2>Stories of Hope</h2>
+    <p>Read inspiring stories from people around the world.</p>
+
+    <!-- User Story Submission with TinyMCE -->
+    <textarea id="storyEditor" placeholder="Share your story..."></textarea>
+    <div>
+        <button>Submit Your Story</button>
+        <button>Hide/Show Stories</button>
+    </div>
+    
+    <!-- Sample story -->
+    <article>
+        <h3>John's Journey</h3>
+        <p>John shares his incredible journey of recovery and hope.</p>
+    </article>
+    <!-- More sample stories can be added here -->
+</section>
+
+
+    <!-- SERVICES SECTION -->
+    <section class="services container" data-aos="fade-up">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+        <div class="service-card">
+            <img src="path-to-image/service1.jpg" alt="Service 1">
+            <h3>Therapeutic Assistance</h3>
+            <p>Professional therapeutic services tailored for individual needs.</p>
+        </div>
+        <div class="service-card">
+            <img src="path-to-image/service2.jpg" alt="Service 2">
+            <h3>Group Support</h3>
+            <p>Find comfort in group sessions, sharing and learning from peers.</p>
+        </div>
+        <div class="service-card">
+            <img src="path-to-image/service3.jpg" alt="Service 3">
+            <h3>Resource Hub</h3>
+            <p>A vast library of resources to help you navigate mental health.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need assistance, please get in touch with our support team.</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+<section class="testimonials container">
+    <h2>What People Say</h2>
+    <div class="testimonial-card">
+        <p>"MindGlow changed my life. The resources and support are unmatched!"</p>
+        <h4>- John Doe</h4>
+    </div>
+    <div class="testimonial-card">
+        <p>"Finding a community that truly cares was a game-changer for me."</p>
+        <h4>- Jane Smith</h4>
+    </div>
+</section>
+
+<!-- NEWSLETTER SECTION -->
+<section class="newsletter container">
+    <h2>Stay Updated</h2>
+    <p>Subscribe to our newsletter for the latest updates and resources.</p>
+    <form action="#">
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+    </form>
+</section>
+
+<!-- ABOUT US SECTION -->
+<section class="about container" data-aos="fade-up">
+    <h2>About Us</h2>
+    <div class="about-content">
+        <div class="about-text">
+            <h3>Our Mission</h3>
+            <p>At MindGlow, we believe in the power of community and understanding. Our mission is to provide comprehensive mental health support, resources, and a platform for shared experiences.</p>
+            <h3>Our Journey</h3>
+            <p>MindGlow started as a small support group in 2015 and has grown to become a beacon of hope for many. Our platform is driven by stories, expertise, and the relentless pursuit of making mental health a priority for all.</p>
+        </div>
+        <div class="about-image">
+            <img src="path-to-image/about-us.jpg" alt="About MindGlow">
+        </div>
+    </div>
+</section>
+
+<!-- EVENTS SECTION -->
+<section class="events container">
+    <h2>Upcoming Events</h2>
+    <div class="event-card">
+        <div class="event-date">
+            <p>Nov 25</p>
+            <small>2023</small>
+        </div>
+        <div class="event-details">
+            <h3>Mental Health Awareness Webinar</h3>
+            <p>Join our panel of experts discussing the importance of mental health and ways to address challenges. Register now!</p>
+            <button>Register</button>
+        </div>
+    </div>
+    <!-- You can replicate the '.event-card' div for more events -->
+</section>
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div>
+            <img src="assets/mindglow-logo.gif" alt="MindGlow Logo" width="50">
+            <p>&copy; 2023 MindGlow Healing. All rights reserved.</p>
+        </div>
+        <ul>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
