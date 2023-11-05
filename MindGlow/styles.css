@@ -6,6 +6,15 @@ body, h1, h2, h3, p, ul, li {
     color: #333;
 }
 
+.title {
+    font-size: 2em; /* Adjust font size to your liking */
+    color: rgb(115, 32, 216); /* Example color - choose what fits your design */
+    font-family: 'Arial', sans-serif; /* This is a clean and modern font */
+    font-weight: bold; /* Makes the text bold */
+    text-shadow: 2px 2px 4px #aaa; /* Optional: adds a shadow for a more pronounced effect */
+    margin-left: 20px; /* Gives some space from the logo */
+  }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -29,43 +38,54 @@ body {
 }
 
 /* Navigation Bar */
+/* Base styling for the navigation bar */
 nav {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #5174dd; /* A dark background for contrast */
+    padding: 1rem 0; /* Some vertical padding for breathing space */
+    font-family: 'Arial', sans-serif; /* Example font */
 }
 
-nav #logo img {
-    max-width: 150px;
-    margin-right: 10px;
+#logo span {
+    font-size: 2rem; /* Making the logo text bigger */
+    font-weight: bold; /* Making it bold for emphasis */
+    color: #ffffff; /* White color for contrast against the dark background */
+    margin-left: 10px; /* Some space between the logo image and text */
 }
 
 nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
+    list-style-type: none; /* Removing default bullet points */
+    padding: 0; /* Removing default padding */
+    display: flex; /* Lining items up horizontally */
+    gap: 15px; /* Space between the list items */
 }
 
-nav ul li {
-    display: inline;
+nav li {
+    margin: 0; /* Removing any default margin */
 }
 
-nav ul li a {
-    padding: 5px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+nav a {
+    font-size: 1.5rem; /* Making the navigation links bigger */
+    color: #ffffff; /* White color for contrast */
+    text-decoration: none; /* Removing the default underline */
+    padding: 0.5rem 1rem; /* Adding some padding for a bigger clickable area */
+    border-radius: 8px; /* Rounded corners for aesthetic appeal */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
 }
 
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+nav a:hover {
+    background-color: #444; /* A slightly lighter shade for hover */
+    color: #ffffff; /* Keeping the text color white on hover */
+}
+
+/* Consider adding a focus state for accessibility */
+nav a:focus {
+    outline: 2px solid #ffffff; /* A white outline for focus */
+    outline-offset: 2px; /* Some space between the outline and the text/link */
 }
 
 /* Buttons */
 button, input[type="submit"] {
-    background: #007BFF;
+    background: #3885d7;
     color: white;
     border: none;
     border-radius: 5px;
@@ -150,27 +170,62 @@ button:hover, input[type="submit"]:hover {
 
 
 
-/* SERVICES SECTION */
+/* General container for the services section */
 .services {
-    background: linear-gradient(45deg, #E9EAEE, #FFFFFF); 
-    padding: 50px 0;
+    background-color: #f4f4f4;  /* Light grey background for some contrast */
+    padding: 4rem 0;  /* Vertical padding for space */
+    text-align: center;  /* Center-aligning the text */
 }
 
-.service-cards:hover .overlay {
-    opacity: 1;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+/* Heading styling */
+.services h2 {
+    font-size: 2.5rem;  /* Slightly larger font size for the heading */
+    margin-bottom: 2rem;  /* Margin at the bottom for separation */
+    color: #333;  /* Dark grey color for the heading */
 }
 
+/* Container for the service cards */
+.service-cards {
+    display: flex;  /* Displaying in a row format */
+    justify-content: space-between;  /* Even space between the cards */
+    gap: 2rem;  /* Space between the service cards if they wrap to the next line */
+    flex-wrap: wrap;  /* Allow wrapping to the next line on smaller screens */
+}
+
+/* Individual service card styling */
+.service-card {
+    flex: 1;  /* Taking up equal width */
+    background-color: #ffffff;  /* White background for contrast against the light grey section background */
+    border-radius: 10px;  /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    padding: 2rem;  /* Padding inside the card */
+    transition: transform 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);  /* Slight lift on hover for an interactive feel */
+}
+
+/* Service card image styling */
 .service-card img {
-    max-width: 100%;
-    border-radius: 10px;
+    max-width: 100%;  /* Ensuring the image doesn't overflow */
+    margin-bottom: 1.5rem;  /* Space below the image */
 }
+
+/* Heading inside the service card */
+.service-card h3 {
+    font-size: 1.8rem;  /* Font size for the service card heading */
+    color: #2a2a2a;  /* Dark grey color */
+    margin-bottom: 1rem;  /* Margin at the bottom for separation */
+}
+
+/* Description inside the service card */
+.service-card p {
+    font-size: 1rem;  /* Standard font size for description */
+    color: #666;  /* Slightly light grey color for description */
+    line-height: 1.5;  /* Spaced out line height for readability */
+}
+
 
 /* TESTIMONIALS SECTION */
 .testimonials {
@@ -192,125 +247,218 @@ button:hover, input[type="submit"]:hover {
     transition: all 0.3s ease;
 }
 
-/* NEWSLETTER SECTION */
+/* Newsletter section styles */
 .newsletter {
-    background: #007BFF;
-    color: white;
-    padding: 50px 0;
-    text-align: center;
+    background-color: #333; /* Dark background for contrast */
+    color: #f7f7f7;  /* Light font color for readability against dark background */
+    padding: 3rem 0;  /* Vertical padding */
+    text-align: center;  /* Center-aligned text */
 }
 
-.newsletter form {
-    max-width: 400px;
-    margin: 0 auto;
-    display: flex;
-    gap: 10px;
+.newsletter-content {
+    margin-bottom: 2rem;  /* Margin at the bottom for separation */
 }
 
-.newsletter input {
-    flex: 1;
-    padding: 10px 15px;
+.newsletter h2 {
+    font-size: 2.5rem;  /* Font size for the heading */
+    margin-bottom: 1rem;  /* Margin at the bottom for separation */
 }
 
-.newsletter button {
-    padding: 10px 20px;
-    background: white;
-    color: #007BFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.newsletter p {
+    font-size: 1.2rem;  /* Slightly larger font size for emphasis */
 }
-/* ABOUT US SECTION */
+
+.newsletter-form form {
+    display: flex;  /* Flex display for horizontal layout */
+    justify-content: center;  /*
+
+/* About section styles */
 .about {
-    background: linear-gradient(45deg, #E9EAEE, #FFFFFF);
-    padding: 50px 0;
+    background-color: #f7f9fb;  /* Light background for a clean look */
+    padding: 4rem 0;  /* Vertical padding for spacing */
+}
+
+.about-header {
+    text-align: center;  /* Center the heading */
+    margin-bottom: 3rem;  /* Margin for separation */
+}
+
+.about-header h2 {
+    font-size: 2.5rem;  /* Large heading */
+    color: #333;  /* Dark color for emphasis */
 }
 
 .about-content {
-    display: flex;
-    gap: 50px;
-    align-items: center;
+    display: flex;  /* Display as flexbox for layout */
+    align-items: center;  /* Vertically center the text and image */
+    gap: 3rem;  /* Gap between text and image */
 }
 
 .about-text {
-    flex: 1;
+    flex: 1;  /* Take up equal width as the image */
+    padding-right: 2rem;  /* Padding for spacing from the image */
+}
+
+.about-section {
+    margin-bottom: 2rem;  /* Margin for separation between mission and journey */
+}
+
+.about-section h3 {
+    font-size: 2rem;  /* Slightly large font for subsection headings */
+    color: #555;  /* Dark grey for emphasis */
+    margin-bottom: 1rem;  /* Margin for separation */
+}
+
+.about-section p {
+    font-size: 1.2rem;  /* A little larger font for readability */
+    color: #666;  /* Grey for easy reading */
+    line-height: 1.6;  /* Spacing between lines */
+}
+
+.about-image {
+    flex: 1;  /* Take up equal width as the text */
+    overflow: hidden;  /* Hide overflow for image */
+    border-radius: 10px;  /* Rounded corners for the image container */
+    width: 100px;    /* Adjust this value based on your preference */
+    max-width: 60%; /* Ensures the image is responsive and doesn't exceed its container's width */
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
 .about-image img {
-    max-width: 100%;
-    border-radius: 10px;
+    width: 100%;  /* Full width of the container */
+    height: auto;  /* Maintain the aspect ratio */
+    transition: transform 0.3s ease;  /* Smooth zoom transition on hover */
 }
 
-/* EVENTS SECTION */
+.about-image:hover img {
+    transform: scale(1.05);  /* Zoom in effect on hover */
+}
+
+
+/* Events section styling */
 .events {
-    padding: 50px 0;
-    background: #fff;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    background-color: #fafafa; /* Light background for better contrast */
+    padding: 4rem 0; /* Vertical padding */
 }
 
-.event-card:hover .overlay{
-    
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    gap: 30px;
-    padding: 20px;
-    margin-bottom: 30px;
-    border: 1px solid #e9ecef;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    opacity: 1;
+.events h2 {
+    text-align: center; /* Center aligned title */
+    margin-bottom: 3rem; /* Space below the title */
+    font-size: 2.5rem; /* Larger font for the title */
+}
+
+.event-card {
+    display: flex; /* Flex layout for card components */
+    align-items: center; /* Centered vertically */
+    border: 1px solid #e0e0e0; /* Light border for the card */
+    padding: 1.5rem; /* Padding inside the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for a floating effect */
 }
 
 .event-date {
-    background: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    border-radius: 10px;
+    text-align: center; /* Centered date info */
+    margin-right: 2rem; /* Margin to separate date and event details */
 }
 
-.event-details {
-    flex: 1;
+.event-day {
+    font-size: 1.8rem; /* Big font for the day */
+    color: #007BFF; /* Highlight color for the day */
+    font-weight: bold; /* Bold font */
 }
 
-.event-details button {
-    padding: 10px 20px;
-    background: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
+.event-year {
+    display: block; /* New line for the year */
+    color: #888; /* Lighter color for the year */
 }
 
-/* Contact Section */
-.contact {
-    background-color: white;
-    padding: 40px 0;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+.event-details h3 {
+    margin-bottom: 1rem; /* Margin below the event name */
+    font-size: 1.6rem; /* Font size for the event name */
 }
 
-.contact form {
-    max-width: 500px;
-    margin: 0 auto;
+.event-details p {
+    margin-bottom: 1.5rem; /* Margin below the event details */
 }
 
-.contact label {
-    display: block;
-    margin-bottom: 5px;
+.event-register-btn {
+    background-color: #007BFF; /* Button color */
+    color: #fff; /* Text color */
+    padding: 0.5rem 1rem; /* Padding for the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Hand cursor for clickable element */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
 }
 
-.contact input, .contact textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.event-register-btn:hover {
+    background-color: #0056b3; /* Darker color on hover */
 }
+
+/* Contact section styles */
+#contact {
+    background-color: #f7f7f7;  /* Light grey background for contrast */
+    padding: 4rem 0;  /* Vertical padding */
+    text-align: center;  /* Center-aligned text */
+}
+
+.contact-content {
+    margin-bottom: 2rem;  /* Margin at the bottom for separation */
+}
+
+#contact h2 {
+    font-size: 2.5rem;  /* Font size for the heading */
+    color: #333;  /* Dark grey color */
+    margin-bottom: 1rem;  /* Margin at the bottom for separation */
+}
+
+#contact p {
+    font-size: 1.2rem;  /* Slightly larger font size for emphasis */
+    color: #666;  /* Light grey color for text */
+}
+
+.input-group {
+    margin-bottom: 1rem;  /* Margin at the bottom for separation between input fields */
+}
+
+.input-group label {
+    display: block;  /* Displayed as block for full-width */
+    margin-bottom: 0.5rem;  /* Margin at the bottom for separation from the input field */
+    font-weight: bold;  /* Bold text for emphasis */
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;  /* Full width for the input fields and textarea */
+    padding: 0.8rem 1rem;  /* Padding inside the fields */
+    border-radius: 5px;  /* Rounded corners */
+    border: 1px solid #ccc;  /* Border around the fields */
+    transition: border-color 0.3s ease;  /* Smooth transition for hover and focus states */
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    border-color: #007BFF;  /* Blue border color for focus state */
+    outline: none;  /* Removing the browser's default outline */
+}
+
+.submit-button {
+    margin-top: 1.5rem;  /* Margin at the top for separation */
+}
+
+.submit-button button {
+    padding: 0.8rem 1.5rem;  /* Padding inside the button */
+    background-color: #007BFF;  /* Blue background color for the button */
+    color: #fff;  /* White text color */
+    border: none;  /* No border */
+    border-radius: 5px;  /* Rounded corners */
+    cursor: pointer;  /* Hand cursor on hover */
+    transition: background-color 0.3s ease;  /* Smooth transition for hover state */
+}
+
+.submit-button button:hover {
+    background-color: #0056b3;  /* Darker blue background color for hover state */
+}
+
 
 /* Footer */
 footer {
