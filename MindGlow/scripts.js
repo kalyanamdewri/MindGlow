@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.body.insertBefore(submitButton, storiesContainer);
     document.body.insertBefore(toggleButton, storiesContainer);
 
-    const API_KEY = "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"; //replace this with your actual OpenAI API key
+    const API_KEY = ""; //replace this with your actual OpenAI API key
 
 
     // Initialize TinyMCE on the textarea
